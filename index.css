@@ -52,12 +52,27 @@
   .mBodyContainer .active_l_navbar {
     height: 100vh;
     width: 200px;
-    background-color: #55ffbb;
+    background-color: #faffff;
     position: fixed;
     top: 0px;
     left: -200px;
     transition: 0.5s ease-in-out;
     transition-timing-function: ease-in-out;
+  }
+  .mBodyContainer .active_l_navbar .l_nav {
+    height: 100%;
+    width: 100%;
+  }
+  .mBodyContainer .active_l_navbar .l_nav ._l_ul {
+    padding-top: 100px;
+    padding-left: 40px;
+  }
+  .mBodyContainer .active_l_navbar .l_nav ._l_ul ._n_link > li {
+    margin: 30px;
+    height: 30px;
+    width: 80px;
+    font-size: 18px;
+    letter-spacing: 2px;
   }
   .mBodyContainer .slide_back {
     left: 0px;
