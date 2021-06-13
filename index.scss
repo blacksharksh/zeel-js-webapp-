@@ -1,0 +1,77 @@
+
+$font_color: rgba(40,39,39);
+$navbar_color: #fffdfdfd;
+$bac_color: rgb(85, 255, 187);
+
+*{
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: $font_color;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+}
+.mBodyContainer{
+    height: 500px;
+    width: 100%;
+    background-color: rgb(250, 250, 254);
+}
+
+@media(min-width: 600px){
+    .mBodyContainer{
+        .mobileNavbar{
+            display: none;
+        }
+        .active_l_navbar{
+            display: none;
+        }
+    }
+}
+@media(max-width: 599px){
+    .mBodyContainer{
+        .mobileNavbar{
+            height: 60px;
+            width: 100%;
+            background-color: $navbar_color;
+            padding-left: 40px;
+            padding-right: 40px;
+            display: block;
+            transition-timing-function: ease-in-out;
+            transition: 0.5s ease-in-out;
+            display: flex;
+            justify-content: space-between;
+            .mLogo{
+                margin-top: 15px;
+                font-weight: 500;
+                font-size: 20px;
+            }
+            .mMenu > i{
+                margin-top: 18px;
+                font-size: 24px;
+                height: 15px;
+                width: 15px;
+            }
+        }
+        // nobile navbar end
+        .active_l_navbar{
+            height: 100vh;
+            width: 200px;
+            background-color: $bac_color;
+            position: fixed;
+            top: 0px;
+            left: -200px;
+            transition: 0.5s ease-in-out;
+            transition-timing-function: ease-in-out;
+        }
+        .slide_back{
+            left: 0px;
+            transition-timing-function: ease-in-out;
+            transition: 0.5s ease-in-out;
+        }
+    } 
+    // mBodyContainer end
+}
